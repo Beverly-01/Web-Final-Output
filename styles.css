@@ -1,0 +1,273 @@
+/* General styles */
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(to bottom, #000000, #2c2c2c);
+    color: #ecf0f1;
+    overflow-x: hidden;
+    padding-top: 150px;  /* Make sure to account for the header height */
+    padding-bottom: 100px; /* To avoid footer overlap */
+}
+
+/* Header styles */
+header {
+    background-color: #ffb6c1;
+    padding: 20px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100px;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 100;
+    box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.2);
+}
+
+header .logo img {
+    height: 60px;
+    border-radius: 50%;
+}
+
+header .portfolio-title h1 {
+    font-size: 32px;
+    color: #ffffff;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    text-shadow: 0px 0px 10px #ff1493, 0px 0px 20px #ff1493;
+}
+
+/* Navigation Menu */
+header nav {
+    display: flex;
+    gap: 20px;
+}
+
+header nav a {
+    color: #fff;
+    text-decoration: none;
+    padding: 12px 20px;
+    background-color: #ff1493;
+    border-radius: 30px;
+    font-size: 16px;
+    font-weight: 500;
+    position: relative;
+    transition: all 0.3s ease;
+}
+
+header nav a:hover {
+    background-color: #e6007e;
+    transform: translateY(-5px);
+    box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.3);
+}
+
+/* Profile Section */
+.profile {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    width: 90%;
+    max-width: 1200px;
+    margin-top: 200px;  /* Avoid overlap with the header */
+    padding: 20px;
+}
+
+.profile-image img {
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    box-shadow: 0px 0px 15px 5px rgba(255, 20, 147, 0.8); /* Pink glow */
+    transition: box-shadow 0.3s ease-in-out; /* Smooth transition for glowing effect */
+}
+
+/* Profile Info Section */
+.profile-info {
+    margin-left: 30px;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.profile-info h2 {
+    font-size: 30px;
+    font-weight: 700;
+    color: #ff1493;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    text-align: right; /* Centering the name */
+}
+
+.profile-info h3 {
+    font-size: 18px;  /* Reduce by 70% of the original font size */
+    color: #ddd;
+    margin-top: 10px;
+    text-align: center; /* Centering the description */
+}
+
+
+.social-icons {
+    display: flex;
+    justify-content: flex-start;
+    gap: 15px;
+    margin-top: 15px;
+}
+
+.social-icons a {
+    display: inline-block;
+}
+
+.social-icons img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    transition: transform 0.3s ease;
+}
+
+.social-icons img:hover {
+    transform: scale(1.1);
+}
+
+/* Heading Styles */
+h2, h3 {
+    color: #ff1493; /* Pink color for headings */
+    text-align: center;
+    font-size: 32px;
+    margin-top: 50px;
+}
+
+/* Infographic Section */
+.infographic {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 30px;
+}
+
+.infographic img {
+    width: 80%;  /* Make sure the infographic fits within the screen */
+    max-width: 600px;
+    border-radius: 10px;
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.3);
+}
+
+.infographic p {
+    color: #ddd;
+    text-align: center;
+    font-size: 18px;
+    margin-top: 10px;
+}
+
+/* Gallery Section */
+#gallery {
+    padding: 40px;
+    margin-top: 100px;  /* Ensure it's not hidden under the header */
+    color: #fff;
+    text-align: center;
+}
+
+.gallery-category {
+    margin-bottom: 60px;
+}
+
+.gallery-category h3 {
+    font-size: 28px;
+    color: #ff1493;
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+
+.gallery-items {
+    display: flex;
+    flex-wrap: wrap;  /* Allow wrapping of items */
+    gap: 20px;
+    justify-content: center;
+    padding: 10px;
+}
+
+.gallery-item {
+    width: calc(16.66% - 20px);  /* Each item takes 1/6 of the row width, with gap */
+    height: 250px;
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease;
+}
+
+.gallery-item:hover {
+    transform: scale(1.05);
+}
+
+.gallery-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.gallery-item img:hover {
+    transform: scale(1.1);
+}
+
+.gallery-item p {
+    font-size: 14px;
+    color: #fff;
+    text-align: center;
+    margin-top: 10px;
+}
+
+/* Footer styles */
+footer {
+    background-color: #ffb6c1;
+    color: #fff;
+    padding: 30px;
+    text-align: center;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    box-shadow: 0px -10px 15px rgba(0, 0, 0, 0.2);
+}
+
+footer p {
+    font-size: 18px;
+    color: #ddd;
+    text-shadow: 0px 0px 10px #ff1493, 0px 0px 20px #ff1493;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .profile {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .profile-image img {
+        width: 120px;
+        height: 120px;
+    }
+
+    .profile-info {
+        margin-left: 0;
+    }
+
+    .social-icons {
+        justify-content: center;
+        gap: 10px;
+    }
+
+    .gallery-items {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .gallery-item {
+        width: 80%;
+    }
+}
